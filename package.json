@@ -1,0 +1,71 @@
+{
+  "name": "aural",
+  "version": "0.0.0",
+  "description": "Audio app",
+  "main": "main.js",
+  "scripts": {
+    "start": "concurrently -k 'npm run start:server' 'npm run start:app'",
+    "start:app": "ENV=development electron .",
+    "start:server": "babel-node server.js",
+    "build": "webpack --config webpack.config.production.js && electron-packager . Aural --platform=darwin --arch=all --overwrite"
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "stage-0",
+      "react"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danigb/aural.git"
+  },
+  "keywords": [
+    "audio"
+  ],
+  "author": "danigb",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/danigb/aural/issues"
+  },
+  "homepage": "https://github.com/danigb/aural#readme",
+  "dependencies": {
+    "audio-context": "^0.1.0",
+    "debounce": "^1.0.0",
+    "electron-prebuilt": "^1.4.13",
+    "mz": "^2.6.0",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-measure": "^1.4.5",
+    "react-redux": "^5.0.2",
+    "rebass": "^0.3.3",
+    "redux": "^3.6.0",
+    "redux-devtools": "^3.3.2",
+    "to-arraybuffer": "^1.0.1"
+  },
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-cli": "^6.18.0",
+    "babel-core": "^6.21.0",
+    "babel-loader": "^6.2.10",
+    "babel-polyfill": "^6.20.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-preset-stage-0": "^6.16.0",
+    "concurrently": "^3.1.0",
+    "css-loader": "^0.26.1",
+    "electron-packager": "^8.5.0",
+    "electron-rebuild": "^1.5.6",
+    "express": "^4.14.0",
+    "less": "^2.7.2",
+    "less-loader": "^2.2.3",
+    "node-libs-browser": "^2.0.0",
+    "postcss-loader": "^1.2.2",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.14.0",
+    "webpack-dev-middleware": "^1.9.0",
+    "webpack-dev-server": "^1.16.2",
+    "webpack-hot-middleware": "^2.15.0",
+    "webpack-target-electron-renderer": "^0.4.0"
+  }
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Aural</title>
+  </head>
+  <body>
+    <div id="root">
+      We are using node <script>document.write(process.versions.node)</script>,
+      Chromium <script>document.write(process.versions.chrome)</script>,
+      and Electron <script>document.write(process.versions.electron)</script>.
+    </div>
+    <script>
+      (function() {
+        const script = document.createElement('script');
+        script.src = process.env.ENV === 'development'
+          ? 'http://localhost:9000/dist/bundle.js' : './dist/bundle.js';
+        document.body.appendChild(script);
+      }());
+    </script>
+  </body>
+
+</html>

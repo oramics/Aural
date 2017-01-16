@@ -1,2 +1,3 @@
 # Aural
-An electron powered audio application
+
+> An electron powered audio application
