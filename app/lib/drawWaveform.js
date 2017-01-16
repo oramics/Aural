@@ -1,4 +1,5 @@
-export default function drawWaveform (ctx, data, { width, height, color, maxStep = 1000 }) {
+export default function drawWaveform (ctx, data,
+  { width, height, color, maxStep = 1000, normalize = 0.8 }) {
   console.log('draw', width, height, data.length)
   if (color) ctx.fillStyle = color
   var step = Math.ceil(data.length / width)

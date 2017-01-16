@@ -11,7 +11,7 @@ export default class WaveOverview extends Component {
     const ctx = canvas.getContext('2d')
     if (buffer) {
       ctx.clearRect(0, 0, 100, 100)
-      drawWaveform(ctx, buffer.getChannelData(0), { width: canvas.width, height: canvas.height, color: '#c00'})
+      drawWaveform(ctx, buffer.getChannelData(0), { width: canvas.width, height: canvas.height, color: '#96AEBF'})
     }
   }
   render () {
